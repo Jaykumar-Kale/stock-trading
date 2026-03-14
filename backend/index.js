@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const dns = require("dns");
 
 const mongoose = require("mongoose");
 const { HoldingsModel } = require("./models/HoldingsModel");
@@ -18,57 +17,13 @@ const cookieParser = require("cookie-parser");
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
-const fallbackUri = process.env.MONGO_URL_FALLBACK;
-
-const parseDnsServers = () => {
-    const raw = process.env.DNS_SERVERS;
-    if (!raw) {
-        return [];
-    }
-
-    return raw
-        .split(",")
-        .map((server) => server.trim())
-        .filter(Boolean);
-};
 
 const connectToMongo = async () => {
-    try {
-        await mongoose.connect(uri);
-        return;
-    } catch (error) {
-        const isSrvDnsError = error?.syscall === "querySrv";
-        if (!isSrvDnsError) {
-            throw error;
-        }
-
-        const dnsServers = parseDnsServers();
-        if (dnsServers.length > 0) {
-            console.warn(`MongoDB SRV DNS lookup failed. Retrying with DNS servers: ${dnsServers.join(", ")}`);
-            dns.setServers(dnsServers);
-
-            try {
-                await mongoose.connect(uri);
-                return;
-            } catch (retryError) {
-                if (!fallbackUri) {
-                    throw retryError;
-                }
-
-                console.warn("Retry with SRV URI failed. Trying MONGO_URL_FALLBACK...");
-                await mongoose.connect(fallbackUri);
-                return;
-            }
-        }
-
-        if (fallbackUri) {
-            console.warn("MongoDB SRV DNS lookup failed. Trying MONGO_URL_FALLBACK...");
-            await mongoose.connect(fallbackUri);
-            return;
-        }
-
-        throw error;
+    if (!uri) {
+        throw new Error("MONGO_URL is missing in backend/.env");
     }
+
+    await mongoose.connect(uri);
 };
 
 const allowedOrigins = [

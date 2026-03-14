@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.HomeTextBlocks{
+  opacity: 0.9;
+  
+}
+.HomeTextBlocks h3{
+  opacity: 0.9;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.HomeTextBlocks p{
+  opacity: 0.9;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+a{
+  text-decoration: none;
+}
+.nav-link{
+  margin-left: 40px;
+}
+.footer a{
+  color: black;
+  opacity: 0.9;
+  display: block; 
+  margin-bottom: 0.3rem;
+}
+.footer p{
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.foootersLastPart a{
+  color: black;
+  opacity: 0.8;
+  font-size: small;
+  display: inline;
+  margin-left: 1rem;
+}
+.foootersLastPart{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+
+}
+.Universe img{
+  width: 15vw;
+  margin-bottom: 3rem;
+}
+.Universe p{
+  opacity: 0.7;
+  font-size: 0.8rem;
+  margin-top: 0%;
+  text-align: center;
+}
+.Universe{
+  padding: 0 12rem;
+  margin-bottom: 5rem;
+}
+.Pricing div{
+  padding: 5rem;
+  opacity: 0.85;
+  text-align: center;
+}
+.Pricing h3{
+  font-size: 1.5rem;
+}
+.Brokerage h1{
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-bottom: 3rem;
+}
+.Brokerage{
+  padding: 4rem;
+}
+.Brokerage h5{
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+.Brokerage p,ul{
+  font-size: small;
+}
+.Support a{
+  color: white;
+  margin-top: 1rem;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  margin-right: 1.2rem;
+}
+.Ticket a{
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  opacity: 0.8;
+}
+.Ticket h3{
+  font-weight: 350;
+  opacity: 0.85;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+.Ticket{
+  margin-left:10rem ;
+}

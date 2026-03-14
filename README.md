@@ -1,4 +1,4 @@
-# Stock Trading Platform (Zerodha-Style Clone)
+# Stock Trading Platform (Zerodha-Style)
 
 Production-ready MERN-style project split into three deployable apps:
 
@@ -7,6 +7,17 @@ Production-ready MERN-style project split into three deployable apps:
 - `backend`: Express API + MongoDB Atlas
 
 This repository is designed for portfolio/interview demonstration with clean deployment architecture and real cloud hosting.
+
+## About
+
+This project is a full-stack web application inspired by Zerodha. It replicates the UI and core trading workflows including authentication, holdings and positions views, and order placement. Users can sign up, log in, explore trading data, and interact with portfolio-style features through a responsive dashboard.
+
+Project links:
+
+- Repository: https://github.com/Jaykumar-Kale/stock-trading
+- Frontend (Landing/Auth): https://stock-trading-srxa.vercel.app/
+- Dashboard (Trading UI): https://stock-trading-gamma.vercel.app/
+- Backend API: https://stock-trading-backend-k34l.onrender.com
 
 ## Live Applications
 
